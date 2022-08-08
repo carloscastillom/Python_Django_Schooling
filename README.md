@@ -8,4 +8,7 @@ relate it to DALOG? possible? gantt diagrams? add projects change the actual vie
 multiple valuation:
 https://corporatefinanceinstitute.com/resources/knowledge/valuation/types-of-valuation-multiples/
 
+comida fusion
+mezcla de ingredientes AI creando recetas
+
 
