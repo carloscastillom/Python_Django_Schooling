@@ -36,7 +36,39 @@
 
 </head>
 <body>
-    <h2>Tasks</h2>
+
+
+  <div class="container">
+    <!-- Content here -->
+
+    <div><br></div>
+
+    <form class="mb-3" action="{% url 'home' %}" method="post">
+      {% csrf_token %} 
+      <div class="mb-3">
+          <input type="text" name="task" placeholder="Enter Task">
+      </div>
+      <div class="mb-3">
+        <select name="priority">
+          <option value="Low">low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>  
+      <div class="mb-3">
+      
+          <select name="status">
+            <option value="planned">Planned</option>
+            <option value="On progress">On Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+      
+        </div>          
+      
+      <input type="submit" value="submit"><br>
+    
+    </form>
+
     <table class="table">
         <thead>
             <tr>
@@ -57,22 +89,33 @@
         </tbody>
     </table>
 
-   
-    <form class="mb-3" action="{% url 'home' %}" method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-            <input type="text" name="task" placeholder="Enter Task">
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
         </div>
-        <div class="mb-3">
-            <input type="text" name="priority" placeholder="Enter priority"><br>
-        </div>  
-        <div class="mb-3">
-            <input type="text" name="status" placeholder="Enter status"><br>
-        </div>          
-        
-        <input type="submit" value="submit"><br>
-
+        <div class="col">
+          <select name="status2">
+            <option value="planned">Planned</option>
+            <option value="On progress">On Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder=" name">
+        </div>
+        <div class="col">
+          <input type="submit" value="submit"><br>
+        </div>
+      </div>
     </form>
+
+    
+
+
+
+  </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
